@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="SuitePRS">
+  <test thread-count="2" parallel="classes" name="ChromeTest">
+  <parameter name="browser" value="ChromeBrowser"/>
+    <classes>
+      <class name="prsTest.NewTest"/>
+      <class name="orangeTest.OrangeTest"/>
+    </classes>
+  </test> <!-- Test -->
+  
+  <test thread-count="2" parallel="classes" name="FirefoxTest">
+   <parameter name="browser" value="FireFoxBrowser"/> 
+    <classes>
+      <class name="prsTest.NewTest"/>
+      <class name="orangeTest.OrangeTest"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- SuitePRS -->
